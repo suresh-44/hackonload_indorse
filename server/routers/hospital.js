@@ -13,14 +13,15 @@ router.get('/create', (req, res) => {
 
 router.post('/create', (req, res) => {
   doctors = [];
+  console.log(req.body.count);
   var str = 'req.body.doctor_';
   for (var i = 1; i <= req.body.count; i++) {
     var doctor = str + i;
-    console.log(eval(doctor));
+
     doctors.push(eval(doctor));
   }
 
-  console.log(doctors);
+  // console.log(doctors);
 
   const newHospital = {
     name: req.body.name,
