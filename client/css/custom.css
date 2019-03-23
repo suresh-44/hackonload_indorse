@@ -1,0 +1,15 @@
+.noti-wrap{
+    margin-left: 60rem;
+}
+
+#add_click{
+    display: none;
+}
+
+#doc{
+    margin-left:15rem; 
+}
+#content{
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
