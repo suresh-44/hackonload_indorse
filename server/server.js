@@ -9,7 +9,7 @@ const app = express();
 
 // mongoose middleware
 mongoose
-  .connect('mongodb://localhost:27017/hospital', {useNewUrlParser: true})
+  .connect('mongodb://onload:onload19@ds349455.mlab.com:49455/onload', {useNewUrlParser: true})
   .then(() => console.log('connected to database'))
   .catch(err => console.log(err));
 
