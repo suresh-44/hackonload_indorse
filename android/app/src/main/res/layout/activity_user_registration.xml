@@ -9,24 +9,54 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:orientation="horizontal"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+
+    >
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="25dp"
         android:src="@drawable/baseline_airport_shuttle_black_24"
+
         />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="REQUEST EMERGENCY"
-        android:layout_margin="36dp"
+        android:textAlignment="center"
+        android:paddingTop="35dp"
         android:textSize="20sp"
+        android:id="@+id/Emergency_TV"
+
         />
 
 </LinearLayout>
     <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/baseline_account_balance_black_36"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/NEARBY_HOSPITAL_TV"
+            android:text="NEARBY HOSPITALS"
+            android:textAlignment="center"
+            android:paddingTop="35dp"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
@@ -40,28 +70,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="NEARBY HOSPITALS"
-            android:layout_margin="36dp"
-            android:textSize="20sp"
-            />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="25dp"
-            android:src="@drawable/blood_drop"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="BLOOD BANK"
-            android:layout_margin="36dp"
+            android:textAlignment="center"
+            android:id="@+id/BloodBANK_TV"
+            android:paddingTop="35dp"
             android:textSize="20sp"
             />
 
