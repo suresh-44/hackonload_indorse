@@ -26,27 +26,6 @@
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/DriverTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#fff176"
-        android:text="DRIVER REGISTRATION"
-        android:textAlignment="center"
-        android:textSize="32sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/HARegisterTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#fff176"
-        android:text="HEALTHCARE ASSISTANT REGISTRATION"
-        android:textAlignment="center"
-        android:textSize="32dp"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/SIGN_UP_TV"
@@ -54,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="#fff176"
-        android:text="USER REGISTRATION"
+        android:text="USER"
         android:textAlignment="center"
         android:textSize="32dp"
         android:textStyle="bold" />

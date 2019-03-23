@@ -20,31 +20,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Login_tv = findViewById(R.id.loginTV);
-        Driver_register_tv = findViewById(R.id.DriverTV);
-         HA_Register_tv = findViewById(R.id.HARegisterTv);
+
          Signup_Tv = findViewById(R.id.SIGN_UP_TV);
 Login_tv.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 
         Intent i = new Intent(MainActivity.this,LoginActivity.class);
-        startActivity(i);
-    }
-});
-
-
-Driver_register_tv.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent i = new Intent(MainActivity.this,DriverRegistration.class);
-        startActivity(i);
-    }
-});
-
-HA_Register_tv.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent i = new Intent(MainActivity.this,HACRegistration.class);
         startActivity(i);
     }
 });
