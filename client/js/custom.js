@@ -8,20 +8,29 @@ function add_doct() {
         x.style.display = "none";
     }
   }
-
+  count=0;
 
   function addRow() {
     var div = document.createElement('div');
 
     div.className = 'row';
 
+   count++;
+
+   
+    
     div.innerHTML =
-        ' <input type="text" id="text" name="text-input" placeholder="Doctor Specialization" class="form-control">\
-        <input type="button" value="-" onclick="removeRow(this)">';
+        '<input type="text" id="text" name="doctor_'+count+'" placeholder="Doctor Specialization" class="form-control">\
+        <input type="button" value="remove" onclick="removeRow(this)"> <br>';
+        
 
     document.getElementById('content').appendChild(div);
+    
 }
 
 function removeRow(input) {
   document.getElementById('content').removeChild(input.parentNode);
 }
+
+document.getElementById('hidd').value = count;
+console.log(count);
