@@ -33,4 +33,27 @@ function removeRow(input) {
 }
 
 document.getElementById('hidd').value = count;
-console.log(count);
+// console.log(count);
+
+
+
+
+    
+      function LoadData()
+      {   
+          var rows_count = 10; 
+          var rowNum = Math.ceil(parseFloat(rows_count));
+      console.log(rows_count);
+          var resultHtml = '';
+      
+          resultHtml += "<table style = \'width:100%;\' border=\'0\' colspan=\'2\' id=\'tbl_user\'>";    
+          for (var i = 1; i <=rowNum ; i++) {
+              resultHtml += '<tr>';
+              resultHtml += '<td border = 1><input type="name" placeholder="text goes here..."></td>';        
+              resultHtml += '</tr>';         
+              }
+
+              resultHtml += '</table>';
+          }  
+          
+        
