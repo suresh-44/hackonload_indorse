@@ -41,7 +41,7 @@ document.getElementById('hidd').value = count;
     
       function LoadData()
       {   
-          var rows_count = 10; 
+          var rows_count =10; 
           var rowNum = Math.ceil(parseFloat(rows_count));
       console.log(rows_count);
           var resultHtml = '';
