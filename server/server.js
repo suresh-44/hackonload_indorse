@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const path = require('path');
 
 const app = express();
 
@@ -28,6 +29,13 @@ app.use(
     saveUninitialized: true
   })
 );
+
+// handlebars middleware
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+// Static public folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 const hospital = require('./routers/hospital');
 

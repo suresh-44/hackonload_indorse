@@ -8,7 +8,7 @@ const Hospital = mongoose.model('hospital');
 const router = express.Router();
 
 router.get('/create', (req, res) => {
-  res.render('create');
+  res.render('hospital/index');
 });
 
 router.post('/create', (req, res) => {
@@ -16,11 +16,11 @@ router.post('/create', (req, res) => {
   var str = 'req.body.doctor_';
   for (var i = 1; i <= req.body.count; i++) {
     var doctor = str + i;
-    // console.log(eval(doctor));
+    console.log(eval(doctor));
     doctors.push(eval(doctor));
   }
 
-  // console.log(doctors);
+  console.log(doctors);
 
   const newHospital = {
     name: req.body.name,
