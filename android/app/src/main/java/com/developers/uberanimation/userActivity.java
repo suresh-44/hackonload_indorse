@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class userActivity extends AppCompatActivity {
 private TextView requestEmergencyTV,mBloodBankTV,mMedicalAttentionTV;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         requestEmergencyTV=findViewById(R.id.request_emergency_id);
@@ -27,6 +27,13 @@ private TextView requestEmergencyTV,mBloodBankTV,mMedicalAttentionTV;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(userActivity.this,Bloodbank.class);
+                startActivity(i);
+            }
+        });
+        mMedicalAttentionTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(userActivity.this,MedicalAttentionActivity.class);
                 startActivity(i);
             }
         });
