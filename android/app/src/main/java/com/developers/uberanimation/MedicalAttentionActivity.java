@@ -19,7 +19,7 @@ import java.util.Scanner;
 public class MedicalAttentionActivity extends AppCompatActivity {
     private TextView mSearchResultsTextView;
     String DOCTOR_URL="http://10.60.222.53:5000/api/doctor";
-    String Doctor_NAME,SPECIALITY
+    String Doctor_NAME,SPECIALITY;
     boolean att;
     int Phone;
     @Override
