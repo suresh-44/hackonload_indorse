@@ -38,9 +38,10 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 const hospital = require('./routers/hospital');
+const user = require('./routers/user')
 
 app.use('/admin', hospital);
-
+app.use('/api', user)
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`server up at ${port}`);
