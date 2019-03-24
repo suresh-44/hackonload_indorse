@@ -17,8 +17,8 @@ private TextView userTV,LoginTV;
         userTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent i = new Intent(MainActivity.this, Options.class);
-                //startActivity(i);
+                Intent i = new Intent(MainActivity.this, userActivity.class);
+                startActivity(i);
             }
         });
     }
