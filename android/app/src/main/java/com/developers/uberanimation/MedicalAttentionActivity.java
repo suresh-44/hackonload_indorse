@@ -20,12 +20,19 @@ public class MedicalAttentionActivity extends AppCompatActivity {
     private TextView mSearchResultsTextView;
     String DOCTOR_URL="http://10.60.222.53:5000/api/doctor";
     String Doctor_NAME,SPECIALITY;
+    TextView dname,dspec,datt,dno;
     boolean att;
     int Phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-mSearchResultsTextView = findViewById(R.id.resultsTV);
+        dname = findViewById(R.id.DNAME);
+        dspec = findViewById(R.id.DSPEC);
+        datt = findViewById(R.id.DaTT);dno = findViewById(R.id.DPHONE);
+
+
+
+
 URL DOC_URL = NetwrokUtils.buildUrl(DOCTOR_URL);
         try {
             String Results = NetwrokUtils.getResponseFromHttpUrl(DOC_URL);
@@ -35,6 +42,10 @@ URL DOC_URL = NetwrokUtils.buildUrl(DOCTOR_URL);
                 SPECIALITY = responseObject.getString("spec");
                 Phone = responseObject.getInt("phone");
                 att = responseObject.getBoolean("att");
+                dname.setText(Doctor_NAME);
+                dno.setText(Phone);
+                datt.setText(""+att);
+                dspec.setText(SPECIALITY);
 
 
 
