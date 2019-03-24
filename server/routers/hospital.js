@@ -42,9 +42,20 @@ router.post('/create', (req, res) => {
   new Hospital(newHospital)
     .save()
     .then(hospital => {
-      res.send(JSON.stringify(hospital, undefined, 2));
+      // res.send(JSON.stringify(hospital, undefined, 2));
+      res.render('hospital/dashboard', {
+        hospital
+      });
     })
     .catch(err => console.log(err));
+});
+
+router.get('/dashboard', (req, res) => {
+  Hospital.find({}).then(hospital => {
+    res.render('hospital/dashbord', {
+      hospital
+    });
+  });
 });
 
 module.exports = router;
