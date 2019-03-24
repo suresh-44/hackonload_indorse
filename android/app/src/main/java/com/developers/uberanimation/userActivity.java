@@ -23,6 +23,13 @@ private TextView requestEmergencyTV,mBloodBankTV,mMedicalAttentionTV;
                 startActivity(i);
             }
         });
+        mBloodBankTV.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(userActivity.this,Bloodbank.class);
+                startActivity(i);
+            }
+        });
 
 
     }
