@@ -25,7 +25,7 @@ router.post('/doctor', (req, res) => {
   new Doctor(newDoctor)
     .save()
     .then(doctor => {
-      res.send({doctor});
+      res.send({doctor: doctor});
     })
     .catch(err => {
       console.log(err);
