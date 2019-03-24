@@ -20,6 +20,7 @@ const hospitalSchema = new Schema({
     long: Number
   },
   doctorList: {
+    
     specialization: String,
     doctors: {type: Array, default: []}
   },
