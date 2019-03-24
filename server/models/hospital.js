@@ -15,24 +15,14 @@ const hospitalSchema = new Schema({
     type: String,
     required: true
   },
-  location: [
-    {
-      lat: {
-        type: Number,
-        required: true
-      },
-      long: {
-        type: Number,
-        required: true
-      }
-    }
-  ],
-  doctorList: [
-    {
-      specialization: String,
-      doctors: [name]
-    }
-  ],
+  location: {
+    lat: Number,
+    long: Number
+  },
+  doctorList: {
+    specialization: String,
+    doctors: {type: Array, default: []}
+  },
   createdAt: {
     type: Date,
     default: Date.now

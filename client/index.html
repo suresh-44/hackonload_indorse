@@ -35,6 +35,7 @@
     
     <link href="css/custom.css" rel="stylesheet" media="all">
 
+    
 </head>
 
 <body class="animsition">
@@ -65,8 +66,8 @@
                             
                         </li>
                         <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                            <a href="card.html">
+                                <i class="fas fa-chart-bar"></i>Attendence</a>
                         </li>
                         <li>
                             <a href="table.html">
@@ -84,7 +85,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <!-- <img src="images/icon/logo.png" alt="Cool Admin" /> -->
                    <center><h1>Hosp &nbsp i </h1></center> 
                 </a>
@@ -98,8 +99,8 @@
                             
                         </li>
                         <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                            <a href="card.html">
+                                <i class="fas fa-chart-bar"></i>Attendence</a>
                         </li>
                         <li>
                             <a href="table.html">
@@ -192,39 +193,39 @@
                                     <div class="card-header">
                                         <strong>Hospital</strong> Details
                                     </div>
-                                    <div class="card-body card-block">
-                                        <form action="" method="post" class="form-horizontal">
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="hf-email" class=" form-control-label">Hospital name</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="text" name="text-input" placeholder="Hospital name..." class="form-control">
-                                                    <span class="help-block">Please enter your Hospital name</span>
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="hf-password" class=" form-control-label">Hospital Phone</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="text-input" placeholder="Hospital Phone" class="form-control">
-                                                    
-                                                </div>
-                                            </div>
+                    <div class="card-body card-block">
+                        <form action="/admin/create" id="myForm" method="post" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="hf-email" class=" form-control-label">Hospital name</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" id="text" name="name" placeholder="Hospital name..." class="form-control">
+                                    <span class="help-block">Please enter your Hospital name</span>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="hf-password" class=" form-control-label">Hospital Phone</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" id="text-input" name="Phone" placeholder="Hospital Phone" class="form-control">
+                                    
+                                </div>
+                            </div>
 
 
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="textarea-input" class=" form-control-label">Hospita Address</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Enter Hospita Address" class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                            
-                                            <button type="button" class="btn btn-danger" onclick="add_doct()">
-                                                <i class="fa fa-plus-circle"></i>&nbsp; Add Doctor</button>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="textarea-input" class=" form-control-label">Hospita Address</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <textarea name="textarea-input" id="textarea-input" rows="9"  name="address" placeholder="Enter Hospita Address" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-danger" onclick="add_doct()"  >
+                                <i class="fa fa-plus-circle"></i>&nbsp; Add Doctor</button>
 
 
                                                 <!-- onclick -->
@@ -232,20 +233,25 @@
                         <div class="card-body card-block" id="add_click">
                             
                                 <div class="row form-group">
+                                    <div class="row">
                                     <div class="col col-md-3">
                                         <label for="hf-email" class=" form-control-label">Specialization
                                         </label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="text" id="text" name="text-input" placeholder="Doctor Specialization" class="form-control">
+                                        <input type="text" id="text" name="specialization" placeholder="Doctor Specialization" class="form-control">
                                         <span class="help-block">Please Enter the Doctor specialization
                                         </span>
                                     </div>
-                                    <p><button type="button" class="btn btn-danger" id="doc" onclick="addRow()" >
+                                
+
+                                    
+                                    <p>                                    <button type="button" class="btn btn-danger" id="doc" onclick="addRow()" >
                                         <i class="fa fa-plus-circle"></i>&nbsp; List Doctors</button></p>
 
                                         <hr>
 
+                                        <input type="hidden" id="hidd" name="count" value="" class="form-control">
                                         <div id="content">
 
                                         </div>
@@ -268,6 +274,19 @@
                                 </div>
                                 
                                         </form>
+                                        <div id="map"></div>
+
+
+
+
+
+
+
+
+
+
+
+                                        
                                     </div>
                                 </div>
                             </div>
